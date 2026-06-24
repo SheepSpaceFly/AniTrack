@@ -15,3 +15,39 @@ target/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+
+# --- Rust / Tauri 后端 ---
+# Rust 编译产生的构建产物，体积大，无需提交[reference:0][reference:1][reference:2]
+src-tauri/target/
+# Tauri 自动生成的 schema 文件[reference:3][reference:4]
+src-tauri/gen/
+# Tauri 本地配置文件（包含本地开发时的特定设置）[reference:5][reference:6]
+src-tauri/tauri.conf.local.json
+
+# --- Node.js 前端 ---
+# 前端依赖包，体积巨大，是必须忽略的[reference:7]
+node_modules/
+# 前端构建产物[reference:8]
+dist/
+build/
+
+# --- 开发工具与缓存 ---
+# 环境变量文件（包含敏感信息）[reference:9]
+.env
+.env.local
+.env.*.local
+
+# 日志文件[reference:10]
+logs/
+*.log
+npm-debug.log*
+
+# 编辑器配置（如 VS Code 和 IDEA）[reference:11]
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 操作系统生成的文件[reference:12]
+.DS_Store
+Thumbs.db
