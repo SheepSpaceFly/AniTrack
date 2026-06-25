@@ -1,4 +1,10 @@
-import { createApp } from "vue";
-import App from "./App.vue";
+// main.ts
+import { createApp } from 'vue'
+import { createPinia } from 'pinia'
+import App from './App.vue'
+import { useTabStore } from './stores/tab'
 
-createApp(App).mount("#app");
+const app = createApp(App)
+app.use(createPinia())
+app.mount('#app')
+
